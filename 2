@@ -18,37 +18,30 @@ public StringBuilder stringReformatting(String s, int k) {
 		if (numChar % k == 0) {
 
 			for (int x = 0; x < s.length(); x++) {
-				if (s.charAt(x) == '-')
+				if (s.charAt(x) == '-'){
 					continue;
+					}
 
 				if (splitK == k) {
 					newString.append('-');
 					newString.append(s.charAt(x));
 					splitK = 1;
-
 				}
-
 				else {
 					newString.append(s.charAt(x));
 					splitK++;
-
 				}
 			}
-
 		}
-
 		else {
-
 			for (int x = 0; x < s.length(); x++) {
 
-				if (s.charAt(x) == '-')
-					continue;
-
+				if (s.charAt(x) == '-')continue;
+				
 				else if (numChar % k == newString.length()) {
 					newString.append('-');
 					newString.append(s.charAt(x));
 					splitK = 1;
-
 				}
 
 				else if (splitK == k) {
@@ -56,18 +49,13 @@ public StringBuilder stringReformatting(String s, int k) {
 					newString.append('-');
 					newString.append(s.charAt(x));
 					splitK = 1;
-
 				}
-
 				else {
 
 					newString.append(s.charAt(x));
 					splitK++;
-
 				}
-
 			}
-
 		}
 		return newString;
 	}

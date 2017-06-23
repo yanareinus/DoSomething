@@ -1,4 +1,4 @@
-public  int getClosingParen(String sentence, int openingParenIndex){
+public int getClosingParen(String sentence, int openingParenIndex){
 	 
 	 int num = 0;
 	Stack <Character>  paren= new Stack <Character>();
@@ -12,21 +12,13 @@ public  int getClosingParen(String sentence, int openingParenIndex){
 		}
 		else if(sentence.charAt(x)==')'&& paren.size()>1 ){
 			
-			paren.pop();
-			
+			paren.pop();	
 		}
-		
-	
-		
+
 		else if(sentence.charAt(x)==')'&& paren.size()==1){
-			
 			 num=x;
-			 break;
-			
-			
-		}
-		
+			 break;	
+		}	
 	}
-	return num; 
-	 
+	return num; 	 
  }
