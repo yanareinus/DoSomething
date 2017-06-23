@@ -1,0 +1,21 @@
+public boolean sumOfTwo(int a[], int b[], int v) {
+
+		boolean flag = false;
+		for (int x = 0; x < a.length; x++) {
+			int firstnum = a[x];
+			for (int y = 0; y < b.length; y++) {
+				int secondNum = b[y];
+				if (firstnum + secondNum == v) {
+
+					flag = true;
+
+				}
+
+			}
+
+		}
+
+		return flag;
+	}
+
+
