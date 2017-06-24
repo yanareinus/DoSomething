@@ -6,9 +6,8 @@ public int getClosingParen(String sentence, int openingParenIndex){
 	for(int x=openingParenIndex;x<sentence.length();x++){
 		
 		if(sentence.charAt(x)=='('){
-			
-			paren.push(sentence.charAt(x));
-			
+	
+			paren.push(sentence.charAt(x));			
 		}
 		else if(sentence.charAt(x)==')'&& paren.size()>1 ){
 			
